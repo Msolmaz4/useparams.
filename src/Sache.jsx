@@ -1,27 +1,33 @@
-import React from 'react'
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
+
 const Sache = () => {
+  
+   const [user,setUser] = useState([])
+
+   useEffect(()=>{
+
+    axios('https://jsonplaceholder.typicode.com/users')
+    .then(res=>setUser(res.data))
+
+   },[])
+
   return (
     <div>
         <ul>
-            <li>
-                <Link to='/search/1'>
-                auto </Link>
+          {
+            user.map((el,id)=>(
+              <li key={el.id} >
+                <Link to={`search/${el.id}`}>{el.name}
+                </Link>
                 </li>
-            <li>
-            <Link to='/search/2'>  fenste
-            </Link> </li>
-            <li>
-            <Link to='/search/3'> 
-                handy</Link>
-                </li>
-            <li>
-            <Link to='/search/4'>
-            Glas</Link></li>
-            <li>
-            <Link to='/search/5'>geldbeutel</Link></li>
+
+            ))
+          }
         </ul>
+        
 
     </div>
   )

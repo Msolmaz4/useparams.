@@ -15,12 +15,12 @@ function App() {
 
         <h1>Welcome to React Router!</h1>
         <Router>
-        <Link to='/search'> search</Link>
+        <Link to='/'> search</Link>
         <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/about" element={<About />} />
         <Route path='/search' element={<Sache/>}/>
-        <Route path='/search/:id' element={<User/>}/>
+       
         
 
       </Routes>
