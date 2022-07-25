@@ -2,7 +2,7 @@ import { Routes, Route, useParams, BrowserRouter as Router, Link, } from 'react-
 import './App.css';
 import Home from './Home';
 import About from './About';
-import Sache from './Sache';
+import Users from './Users';
 import User from './User';
 
 
@@ -15,12 +15,12 @@ function App() {
 
         <h1>Welcome to React Router!</h1>
         <Router>
-        <Link to='/'> search</Link>
+      
         <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/about" element={<About />} />
-        <Route path='/search' element={<Sache/>}/>
-       
+        <Route path='/users' element={<Users/>}/>
+        <Route path='/user/:id' element={<User/>}/>
         
 
       </Routes>
