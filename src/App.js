@@ -3,7 +3,9 @@ import './App.css';
 import Home from './Home';
 import About from './About';
 import Users from './Users';
-import User from './User';
+import User from './User'
+import Error from './Error';
+
 
 
 
@@ -20,7 +22,8 @@ function App() {
         <Route path="/" element={<Home/>} />
         <Route path="/about" element={<About />} />
         <Route path='/users' element={<Users/>}/>
-        <Route path='/user/:id' element={<User/>}/>
+        <Route path='/users/:id' element={<User/>}/>
+        <Route path='*' element={<Error/>}/>
         
 
       </Routes>

@@ -1,11 +1,12 @@
 import React from 'react'
-import Sache from './Users'
+import Users from './Users'
+
 const Home =()=>{
     return(
         <div>
 
             homneeeeeeeeee
-            <Sache/>
+            <Users/>
         </div>
     )
 }
